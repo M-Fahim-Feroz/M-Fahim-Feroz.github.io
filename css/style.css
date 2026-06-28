@@ -1,41 +1,40 @@
+/* Custom styles that extend Tailwind */
+
 body { 
     background-color: #07110D; 
     color: #d9e5de; 
 }
 
+/* Glass panel for floating elements */
 .glass-panel {
-    background: rgba(16, 34, 24, 0.6);
+    background: rgba(16, 34, 24, 0.75);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid #244034;
 }
 
-.premium-border { 
-    border: 1px solid #C7A76C; 
-}
-
+/* Tech chip base style */
 .tech-chip { 
     background-color: #132B1F; 
     border: 1px solid #244034; 
     color: #86EFAC; 
+    transition: border-color 0.2s;
 }
-
 .tech-chip:hover { 
     border-color: #22C55E; 
 }
 
-/* Subtle float animation for the hero image card */
+/* Subtle float animation */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
-
 .floating-element { 
     animation: float 6s ease-in-out infinite; 
 }
 
-/* Grid background pattern */
+/* Subtle grid background */
 .bg-grid-pattern {
     background-size: 40px 40px;
     background-image: 
@@ -43,17 +42,43 @@ body {
         linear-gradient(to bottom, rgba(36, 64, 52, 0.1) 1px, transparent 1px);
 }
 
-/* Custom Scrollbar for better dark mode experience */
-::-webkit-scrollbar {
-    width: 10px;
+/* Active nav link (set by JS on scroll) */
+.nav-link-active {
+    color: #4be277 !important;
+    border-bottom: 2px solid #4be277;
+    padding-bottom: 4px;
 }
-::-webkit-scrollbar-track {
-    background: #0B1711;
+
+/* Scroll-to-top button */
+#scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 44px;
+    height: 44px;
+    background: #132B1F;
+    border: 1px solid #244034;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, border-color 0.3s;
+    color: #4be277;
 }
-::-webkit-scrollbar-thumb {
-    background: #244034;
-    border-radius: 5px;
+#scroll-top-btn.visible {
+    opacity: 1;
+    pointer-events: all;
 }
-::-webkit-scrollbar-thumb:hover {
-    background: #22c55e;
+#scroll-top-btn:hover {
+    border-color: #22C55E;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0B1711; }
+::-webkit-scrollbar-thumb { background: #244034; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #22c55e; }
