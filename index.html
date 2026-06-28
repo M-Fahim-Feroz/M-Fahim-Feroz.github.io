@@ -1,235 +1,533 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M. Fahim Feroz - DevOps & Cloud Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for generic icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Muhammad Fahim Feroz - Cloud &amp; DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "on-background": "#d9e5de",
+                      "secondary-fixed-dim": "#e4c284",
+                      "on-secondary": "#412d00",
+                      "on-primary": "#003915",
+                      "primary-container": "#22c55e",
+                      "on-tertiary-fixed-variant": "#4e4633",
+                      "surface": "#0b1511",
+                      "on-secondary-fixed": "#261900",
+                      "primary-fixed-dim": "#4ae176",
+                      "primary": "#4be277",
+                      "on-secondary-fixed-variant": "#5a4312",
+                      "on-primary-fixed": "#002109",
+                      "on-surface": "#d9e5de",
+                      "outline": "#869585",
+                      "primary-fixed": "#6bff8f",
+                      "surface-bright": "#313c37",
+                      "on-primary-container": "#004b1e",
+                      "inverse-primary": "#006e2f",
+                      "on-error": "#690005",
+                      "tertiary": "#d2c6ad",
+                      "surface-variant": "#2c3732",
+                      "secondary": "#e4c284",
+                      "surface-tint": "#4ae176",
+                      "secondary-container": "#5d4514",
+                      "error": "#ffb4ab",
+                      "inverse-on-surface": "#28332e",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-container": "#473f2d",
+                      "on-primary-fixed-variant": "#005321",
+                      "on-tertiary-fixed": "#211b0b",
+                      "surface-dim": "#0b1511",
+                      "secondary-fixed": "#ffdea5",
+                      "on-surface-variant": "#bccbb9",
+                      "tertiary-fixed": "#eee1c7",
+                      "on-tertiary": "#36301e",
+                      "surface-container-low": "#131e19",
+                      "tertiary-container": "#b6ab93",
+                      "tertiary-fixed-dim": "#d1c5ac",
+                      "on-secondary-container": "#d5b478",
+                      "inverse-surface": "#d9e5de",
+                      "surface-container": "#17221d",
+                      "surface-container-lowest": "#06100c",
+                      "surface-container-highest": "#2c3732",
+                      "outline-variant": "#3d4a3d",
+                      "surface-container-high": "#222c28",
+                      "background": "#0b1511"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "24px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "card-padding": "32px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "label-mono": ["JetBrains Mono"],
+                      "label-caps": ["JetBrains Mono"],
+                      "display-lg-mobile": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-mono": ["13px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                      "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                      "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+              }
+            }
+          }
+        }
+    </script>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-content container">
-            <div class="logo">MFF<span class="accent">.</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body class="font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container relative">
+
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+            <!-- Brand -->
+            <a class="font-display-lg text-[24px] md:text-display-lg text-primary tracking-tighter hover:opacity-80 transition-opacity" href="#home">
+                MFF
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#home">Home</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#about">About</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#skills">Skills</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#projects">Projects</a>
+                <a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <a aria-label="GitHub" class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://github.com/M-Fahim-Feroz" target="_blank">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                </a>
+                <a aria-label="LinkedIn" class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="PUT_LINKEDIN_URL_HERE" target="_blank">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a class="px-4 py-2 border border-[#244034] text-on-background font-label-mono text-label-mono rounded hover:bg-[#132B1F] hover:border-primary transition-all duration-300 flex items-center gap-2" href="./assets/resume.pdf" target="_blank">
+                    <span class="material-symbols-outlined text-[18px]">description</span>
+                    Resume
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-on-surface hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-[28px]">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-nav" class="hidden md:hidden bg-surface border-b border-outline-variant/30 px-gutter py-4 flex flex-col gap-4">
+            <a class="text-primary font-bold font-body-md" href="#home">Home</a>
+            <a class="text-on-surface-variant font-body-md hover:text-primary" href="#about">About</a>
+            <a class="text-on-surface-variant font-body-md hover:text-primary" href="#skills">Skills</a>
+            <a class="text-on-surface-variant font-body-md hover:text-primary" href="#projects">Projects</a>
+            <a class="text-on-surface-variant font-body-md hover:text-primary" href="#contact">Contact</a>
+            <div class="h-[1px] bg-outline-variant/30 my-2"></div>
+            <a class="text-on-surface-variant font-body-md flex items-center gap-2 hover:text-primary" href="https://github.com/M-Fahim-Feroz" target="_blank">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                GitHub
+            </a>
+            <a class="text-on-surface-variant font-body-md flex items-center gap-2 hover:text-primary" href="PUT_LINKEDIN_URL_HERE" target="_blank">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn
+            </a>
+            <a class="text-primary font-body-md flex items-center gap-2 mt-2" href="./assets/resume.pdf" target="_blank">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                Download Resume
+            </a>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">M. Fahim Feroz</h1>
-            <h2 class="hero-subtitle">DevOps & Cloud Engineer</h2>
-            <p class="hero-text">
-                Designing cloud infrastructure, CI/CD pipelines, Kubernetes deployments, and secure automation workflows across Azure and AWS.
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="https://github.com/M-Fahim-Feroz" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub Profile</a>
-                <a href="#" class="btn btn-outline"><i class="fas fa-file-alt"></i> Resume</a>
-            </div>
-        </div>
-    </header>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-[90vh] flex flex-col justify-center bg-grid-pattern py-section-gap overflow-hidden" id="home">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#07110D] pointer-events-none"></div>
+            
+            <div class="max-w-container-max mx-auto px-gutter w-full relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Content (Left on desktop, Top on mobile) -->
+                <div class="flex flex-col items-start gap-stack-lg max-w-2xl order-2 lg:order-1 mt-8 lg:mt-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#244034] bg-[#102218] text-primary font-label-mono text-label-mono">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Available for Cloud &amp; DevOps Opportunities
+                    </div>
+                    
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                        Hi, I’m <span class="text-primary block mt-2">Muhammad Fahim Feroz</span>
+                        <span class="text-on-surface-variant text-[28px] md:text-[40px] leading-tight block mt-2 font-semibold">Cloud &amp; DevOps Engineer</span>
+                    </h1>
+                    
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Building hands-on cloud and DevOps projects focused on infrastructure automation, CI/CD pipelines, containerized deployments, and reliable cloud workflows.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4 mt-4">
+                        <a class="px-6 py-3 bg-primary-container text-on-primary-container font-bold rounded hover:bg-primary-fixed transition-colors" href="#projects">
+                            View Projects
+                        </a>
+                        <a class="px-6 py-3 border border-[#244034] text-on-background font-bold rounded hover:bg-[#132B1F] transition-colors flex items-center gap-2" href="./assets/resume.pdf" target="_blank">
+                            Download Resume
+                            <span class="material-symbols-outlined text-[20px]">download</span>
+                        </a>
+                    </div>
+                </div>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>
-                    I am a DevOps and Cloud Engineer focused on designing scalable, reproducible, and secure infrastructure. My expertise spans cloud infrastructure provisioning, automated delivery pipelines, container orchestration, and Infrastructure as Code. I build security-first deployment workflows with embedded observability, ensuring that systems are resilient, cost-aware, and built to enterprise standards from commit to cluster.
+                <!-- Visual (Right on desktop, Bottom/Hidden on small mobile) -->
+                <div class="relative flex justify-center items-center h-full order-1 lg:order-2">
+                    <div class="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-full border border-[#244034] flex items-center justify-center p-2 z-10">
+                        <div class="absolute inset-0 rounded-full border border-secondary opacity-30 animate-[spin_10s_linear_infinite]"></div>
+                        <div class="w-full h-full rounded-full overflow-hidden border border-primary/20 bg-[#102218]">
+                            <img alt="Muhammad Fahim Feroz" class="w-full h-full object-cover transition-all duration-500" src="./assets/profile-hero.jpg"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Glass Card -->
+                    <div class="absolute bottom-4 -left-4 md:-left-12 glass-panel p-3 md:p-4 rounded-lg flex items-center gap-3 floating-element z-20 shadow-2xl">
+                        <span class="material-symbols-outlined text-primary text-[28px] md:text-[32px]">cloud_sync</span>
+                        <div>
+                            <p class="font-label-mono text-label-mono text-secondary mb-1">CORE EXPERTISE</p>
+                            <p class="font-label-caps text-[10px] md:text-label-caps text-on-surface tracking-wider leading-relaxed">
+                                Cloud • DevOps • Automation<br/>
+                                CI/CD • Containers • IaC
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-section-gap bg-[#0B1711] border-y border-[#244034]" id="about">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Image -->
+                    <div class="lg:col-span-5 relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-[#244034] to-[#132B1F] rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative rounded-xl overflow-hidden border border-[#244034] bg-[#102218] aspect-[4/5]">
+                            <img alt="About Muhammad Fahim Feroz" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" src="./assets/profile-about.jpg"/>
+                            <div class="absolute inset-0 border border-secondary/20 rounded-xl pointer-events-none"></div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="lg:col-span-7 flex flex-col gap-stack-md">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="w-8 h-[1px] bg-primary"></span>
+                            <h2 class="font-label-mono text-label-mono text-primary uppercase">About Me</h2>
+                        </div>
+                        
+                        <h3 class="font-headline-md text-headline-md text-on-surface">Building Cloud &amp; DevOps Skills Through Hands-On Projects</h3>
+                        
+                        <div class="space-y-6 text-on-surface-variant font-body-md mt-4 leading-relaxed">
+                            <p>
+                                I am Muhammad Fahim Feroz, a Cloud and DevOps focused engineer building hands-on experience with cloud platforms, Linux, containerization, infrastructure as code, and CI/CD automation. I enjoy turning manual deployment steps into automated workflows and documenting my learning through real projects.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+                            <div class="p-4 border border-[#244034] bg-[#102218] rounded flex items-start gap-3 hover:border-secondary transition-colors duration-300">
+                                <span class="material-symbols-outlined text-primary mt-1">terminal</span>
+                                <div>
+                                    <h4 class="font-bold text-on-surface text-sm mb-1">Automation First</h4>
+                                    <p class="text-xs text-on-surface-variant">Minimizing manual intervention through script-driven processes.</p>
+                                </div>
+                            </div>
+                            <div class="p-4 border border-[#244034] bg-[#102218] rounded flex items-start gap-3 hover:border-secondary transition-colors duration-300">
+                                <span class="material-symbols-outlined text-primary mt-1">deployed_code</span>
+                                <div>
+                                    <h4 class="font-bold text-on-surface text-sm mb-1">Containerized Deployments</h4>
+                                    <p class="text-xs text-on-surface-variant">Packaging and orchestrating applications with Docker and Kubernetes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="py-section-gap bg-surface" id="skills">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col items-center text-center gap-4 mb-12">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-primary"></span>
+                        <h2 class="font-label-mono text-label-mono text-primary uppercase">Technical Skills</h2>
+                        <span class="w-8 h-[1px] bg-primary"></span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Core Competencies</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cloud Platforms -->
+                    <div class="p-6 border border-[#244034] bg-[#0b1711] rounded-lg hover:border-secondary transition-colors duration-300 group">
+                        <div class="w-12 h-12 rounded bg-[#132B1F] flex items-center justify-center mb-4 border border-[#244034] group-hover:border-secondary transition-colors duration-300">
+                            <span class="material-symbols-outlined text-primary">cloud</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-3">Cloud Platforms</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">AWS</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Azure</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps & CI/CD -->
+                    <div class="p-6 border border-[#244034] bg-[#0b1711] rounded-lg hover:border-secondary transition-colors duration-300 group">
+                        <div class="w-12 h-12 rounded bg-[#132B1F] flex items-center justify-center mb-4 border border-[#244034] group-hover:border-secondary transition-colors duration-300">
+                            <span class="material-symbols-outlined text-primary">sync_alt</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-3">DevOps &amp; CI/CD</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">GitHub Actions</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Azure DevOps Pipelines</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Git</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">CI/CD Workflows</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Automation</span>
+                        </div>
+                    </div>
+
+                    <!-- Containers & Orchestration -->
+                    <div class="p-6 border border-[#244034] bg-[#0b1711] rounded-lg hover:border-secondary transition-colors duration-300 group">
+                        <div class="w-12 h-12 rounded bg-[#132B1F] flex items-center justify-center mb-4 border border-[#244034] group-hover:border-secondary transition-colors duration-300">
+                            <span class="material-symbols-outlined text-primary">view_in_ar</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-3">Containers &amp; Orchestration</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Docker</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Kubernetes</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">AKS</span>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure as Code -->
+                    <div class="p-6 border border-[#244034] bg-[#0b1711] rounded-lg hover:border-secondary transition-colors duration-300 group">
+                        <div class="w-12 h-12 rounded bg-[#132B1F] flex items-center justify-center mb-4 border border-[#244034] group-hover:border-secondary transition-colors duration-300">
+                            <span class="material-symbols-outlined text-primary">architecture</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-3">Infrastructure as Code</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Terraform</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Cloud Infrastructure</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Environment Provisioning</span>
+                        </div>
+                    </div>
+
+                    <!-- Systems & Networking -->
+                    <div class="p-6 border border-[#244034] bg-[#0b1711] rounded-lg hover:border-secondary transition-colors duration-300 group md:col-span-2 lg:col-span-2 xl:col-span-1 xl:col-start-auto">
+                        <div class="w-12 h-12 rounded bg-[#132B1F] flex items-center justify-center mb-4 border border-[#244034] group-hover:border-secondary transition-colors duration-300">
+                            <span class="material-symbols-outlined text-primary">router</span>
+                        </div>
+                        <h4 class="font-bold text-on-surface mb-3">Systems &amp; Networking</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Linux</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Bash</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">VPC / VNet Basics</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">DNS</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Load Balancing</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded transition-colors duration-300">Networking Basics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="py-section-gap bg-[#0B1711] border-y border-[#244034]" id="projects">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col items-start gap-4 mb-12">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-primary"></span>
+                        <h2 class="font-label-mono text-label-mono text-primary uppercase">Featured Projects</h2>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-on-surface">Hands-on cloud and DevOps projects focused on deployment, automation, and infrastructure.</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+                        <h4 class="font-bold text-xl text-on-surface mb-3">Azure AKS DevOps Pipeline</h4>
+                        <p class="text-on-surface-variant mb-6 flex-grow">A DevOps pipeline project focused on deploying containerized applications to Azure Kubernetes Service using automated workflows.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Azure</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">AKS</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Kubernetes</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Docker</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">CI/CD</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">GitHub Actions</span>
+                        </div>
+                        
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-mono text-label-mono hover:text-primary transition-colors mt-auto" href="PUT_PROJECT_1_GITHUB_URL_HERE" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">terminal</span> View on GitHub
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+                        <h4 class="font-bold text-xl text-on-surface mb-3">Terraform AWS Infrastructure</h4>
+                        <p class="text-on-surface-variant mb-6 flex-grow">Infrastructure as Code project for provisioning cloud resources on AWS using Terraform with reusable and organized configuration.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">AWS</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Terraform</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">IaC</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Cloud Infrastructure</span>
+                        </div>
+                        
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-mono text-label-mono hover:text-primary transition-colors mt-auto" href="PUT_PROJECT_2_GITHUB_URL_HERE" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">terminal</span> View on GitHub
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+                        <h4 class="font-bold text-xl text-on-surface mb-3">Kubernetes Application Deployment</h4>
+                        <p class="text-on-surface-variant mb-6 flex-grow">A Kubernetes deployment project showing container orchestration concepts, manifests, services, and application deployment workflow.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Kubernetes</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Docker</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">YAML</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Linux</span>
+                        </div>
+                        
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-mono text-label-mono hover:text-primary transition-colors mt-auto" href="PUT_PROJECT_3_GITHUB_URL_HERE" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">terminal</span> View on GitHub
+                        </a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-secondary transition-colors duration-300 flex flex-col h-full">
+                        <h4 class="font-bold text-xl text-on-surface mb-3">FastAPI CI/CD Pipeline</h4>
+                        <p class="text-on-surface-variant mb-6 flex-grow">A backend deployment workflow using FastAPI with automated build, test, containerization, and deployment pipeline concepts.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">FastAPI</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">Docker</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">GitHub Actions</span>
+                            <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">CI/CD</span>
+                        </div>
+                        
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-mono text-label-mono hover:text-primary transition-colors mt-auto" href="PUT_PROJECT_4_GITHUB_URL_HERE" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">terminal</span> View on GitHub
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Process Section -->
+        <section class="py-section-gap bg-surface">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="flex flex-col items-center text-center gap-4 mb-16">
+                    <div class="flex items-center gap-3">
+                        <span class="w-8 h-[1px] bg-primary"></span>
+                        <h2 class="font-label-mono text-label-mono text-primary uppercase">Engineering Process</h2>
+                        <span class="w-8 h-[1px] bg-primary"></span>
+                    </div>
+                </div>
+
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Desktop Connector Line -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-[#244034] -translate-y-1/2 z-0"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center text-center group">
+                            <div class="w-16 h-16 rounded-full bg-[#102218] border-2 border-primary flex items-center justify-center mb-6 group-hover:border-secondary transition-colors duration-300 group-hover:shadow-[0_0_15px_rgba(228,194,132,0.3)]">
+                                <span class="material-symbols-outlined text-primary text-[28px] group-hover:text-secondary transition-colors duration-300">architecture</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface text-lg mb-2">Plan Infrastructure</h4>
+                            <p class="text-sm text-on-surface-variant max-w-[250px] bg-surface md:bg-transparent">Designing scalable architecture and selecting the right cloud services.</p>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center text-center group mt-8 md:mt-0">
+                            <div class="w-16 h-16 rounded-full bg-[#102218] border-2 border-primary flex items-center justify-center mb-6 group-hover:border-secondary transition-colors duration-300 group-hover:shadow-[0_0_15px_rgba(228,194,132,0.3)]">
+                                <span class="material-symbols-outlined text-primary text-[28px] group-hover:text-secondary transition-colors duration-300">code_blocks</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface text-lg mb-2">Automate Deployment</h4>
+                            <p class="text-sm text-on-surface-variant max-w-[250px] bg-surface md:bg-transparent">Writing IaC and building CI/CD pipelines for reliable delivery.</p>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center text-center group mt-8 md:mt-0">
+                            <div class="w-16 h-16 rounded-full bg-[#102218] border-2 border-primary flex items-center justify-center mb-6 group-hover:border-secondary transition-colors duration-300 group-hover:shadow-[0_0_15px_rgba(228,194,132,0.3)]">
+                                <span class="material-symbols-outlined text-primary text-[28px] group-hover:text-secondary transition-colors duration-300">rocket_launch</span>
+                            </div>
+                            <h4 class="font-bold text-on-surface text-lg mb-2">Deploy &amp; Improve</h4>
+                            <p class="text-sm text-on-surface-variant max-w-[250px] bg-surface md:bg-transparent">Releasing robust applications and monitoring for continuous improvement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-section-gap bg-[#0B1711] border-t border-[#244034]" id="contact">
+            <div class="max-w-container-max mx-auto px-gutter">
+                <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-6">
+                    <h2 class="font-display-lg-mobile md:font-display-lg text-primary">Let’s Connect</h2>
+                    <p class="text-on-surface-variant font-body-lg text-lg">
+                        I’m open to Cloud Engineer, DevOps Engineer, Junior DevOps Engineer, Cloud Support, and Infrastructure Engineering opportunities.
+                    </p>
+                    
+                    <div class="flex flex-wrap justify-center gap-4 mt-6">
+                        <a class="px-8 py-3 bg-primary-container text-on-primary-container font-bold rounded hover:bg-primary-fixed transition-colors flex items-center gap-2" href="mailto:PUT_EMAIL_HERE">
+                            <span class="material-symbols-outlined text-[20px]">mail</span>
+                            Email Me
+                        </a>
+                        <a class="px-8 py-3 border border-[#244034] text-on-background font-bold rounded hover:bg-[#132B1F] hover:border-primary transition-all duration-300 flex items-center gap-2" href="https://github.com/M-Fahim-Feroz" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">terminal</span>
+                            GitHub Profile
+                        </a>
+                        <a class="px-8 py-3 border border-[#244034] text-on-background font-bold rounded hover:bg-[#132B1F] hover:border-primary transition-all duration-300 flex items-center gap-2" href="PUT_LINKEDIN_URL_HERE" target="_blank">
+                            <span class="material-symbols-outlined text-[20px]">work</span>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full py-stack-lg bg-surface-container-lowest border-t border-[#244034]">
+            <div class="flex flex-col md:flex-row justify-center items-center px-gutter max-w-container-max mx-auto gap-stack-md text-center">
+                <p class="font-label-caps text-label-caps text-on-surface-variant">
+                    © 2025 Muhammad Fahim Feroz. Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.
                 </p>
             </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Core Engineering Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud</h3>
-                    <p>Azure, AWS</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-box-open"></i></div>
-                    <h3>Containers</h3>
-                    <p>Docker, Kubernetes, Helm</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
-                    <h3>IaC</h3>
-                    <p>Terraform, Ansible</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-random"></i></div>
-                    <h3>CI/CD</h3>
-                    <p>GitHub Actions</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Security</h3>
-                    <p>CodeQL, Trivy, Dependabot, Secret Hygiene</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Observability</h3>
-                    <p>Prometheus, Grafana</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-server"></i></div>
-                    <h3>Backend/Systems</h3>
-                    <p>FastAPI, PostgreSQL, Redis, Linux</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <!-- Flagship Project -->
-                <div class="project-card flagship">
-                    <div class="project-header">
-                        <div class="project-badge">Flagship Project</div>
-                        <h3>azure-aks-devops-pipeline</h3>
-                    </div>
-                    <p class="project-desc">End-to-end Azure AKS DevOps platform with Terraform, Ansible, Docker, GitHub Actions, FastAPI, PostgreSQL, Redis, Prometheus, and Grafana.</p>
-                    <div class="project-tech">
-                        <span>Azure</span><span>AKS</span><span>Terraform</span><span>Ansible</span><span>Docker</span><span>GitHub Actions</span><span>Prometheus</span>
-                    </div>
-                    <div class="project-focus">
-                        <strong>Engineering Focus:</strong> Production-style cloud deployment, CI/CD, observability, Kubernetes operations.
-                    </div>
-                    <ul class="project-bullets">
-                        <li>Automated end-to-end pipeline provisioning Azure infrastructure via Terraform with remote state.</li>
-                        <li>Declarative Kubernetes deployment via Ansible and Helm.</li>
-                        <li>Full observability stack providing namespace, pod, and node metrics out of the box.</li>
-                    </ul>
-                    <a href="https://github.com/M-Fahim-Feroz/azure-aks-devops-pipeline" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>terraform-aws-infrastructure</h3>
-                    <p class="project-desc">Modular AWS infrastructure using Terraform, GitHub Actions plan/apply workflows, remote state, VPC networking, compute, database, and security groups.</p>
-                    <div class="project-tech">
-                        <span>AWS</span><span>Terraform</span><span>VPC</span><span>EC2</span><span>RDS</span>
-                    </div>
-                    <div class="project-focus">
-                        <strong>Engineering Focus:</strong> Infrastructure as Code, AWS networking, safe Terraform workflow design.
-                    </div>
-                    <ul class="project-bullets">
-                        <li>Zero-SSH architecture utilizing AWS Systems Manager.</li>
-                        <li>Protected plan/apply pipelines with manual deployment gates.</li>
-                        <li>Multi-AZ layout ensuring high availability and database privacy.</li>
-                    </ul>
-                    <a href="https://github.com/M-Fahim-Feroz/terraform-aws-infrastructure" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>fastapi-devsecops-pipeline</h3>
-                    <p class="project-desc">FastAPI DevSecOps project with Docker, CI/CD, security scanning, testing, and local service orchestration.</p>
-                    <div class="project-tech">
-                        <span>FastAPI</span><span>Docker</span><span>Trivy</span><span>Bandit</span><span>GitHub Actions</span>
-                    </div>
-                    <div class="project-focus">
-                        <strong>Engineering Focus:</strong> Secure application delivery, container builds, SAST/dependency/container scanning.
-                    </div>
-                    <ul class="project-bullets">
-                        <li>Multi-stage Docker builds securing minimal base images and non-root execution.</li>
-                        <li>Integrated SAST (Bandit) and CVE scanning (Trivy) acting as pipeline gates.</li>
-                        <li>Robust local orchestration of asynchronous workers via Docker Compose.</li>
-                    </ul>
-                    <a href="https://github.com/M-Fahim-Feroz/fastapi-devsecops-pipeline" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="project-card">
-                    <h3>kubernetes-application-deployment</h3>
-                    <p class="project-desc">Kubernetes deployment project with manifests, Helm, CI validation, image tag injection, and local render/deploy workflow.</p>
-                    <div class="project-tech">
-                        <span>Kubernetes</span><span>Helm</span><span>Docker</span>
-                    </div>
-                    <div class="project-focus">
-                        <strong>Engineering Focus:</strong> Kubernetes deployment hygiene, manifest validation, release-safe image tagging.
-                    </div>
-                    <ul class="project-bullets">
-                        <li>Declarative raw YAML and parameterized Helm chart strategies.</li>
-                        <li>Dynamic CI injection of Git SHA tags into deployment manifests.</li>
-                        <li>Security boundaries defined by NetworkPolicies, HPA, and precise resource limits.</li>
-                    </ul>
-                    <a href="https://github.com/M-Fahim-Feroz/kubernetes-application-deployment" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="approach" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Engineering Approach</h2>
-            <div class="approach-grid">
-                <div class="approach-card">
-                    <h4><i class="fas fa-cube"></i> Reproducible Infrastructure</h4>
-                    <p>Managing ephemeral cloud resources purely via IaC to eliminate configuration drift and manual UI provisioning.</p>
-                </div>
-                <div class="approach-card">
-                    <h4><i class="fas fa-lock"></i> Secure CI/CD</h4>
-                    <p>Integrating static analysis, CVE scanning, and least-privilege principles directly into automated delivery pipelines.</p>
-                </div>
-                <div class="approach-card">
-                    <h4><i class="fas fa-dharmachakra"></i> Kubernetes-Ready Deployments</h4>
-                    <p>Architecting scalable, resource-bounded, and self-healing container workloads using raw manifests and Helm.</p>
-                </div>
-                <div class="approach-card">
-                    <h4><i class="fas fa-book"></i> Operational Documentation</h4>
-                    <p>Providing full-stack metric visibility alongside comprehensive runbooks, architecture diagrams, and cost analyses.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="roadmap" class="section">
-        <div class="container">
-            <h2 class="section-title">Portfolio Roadmap</h2>
-            <ul class="roadmap-list">
-                <li><i class="fas fa-check-circle"></i> Cloud OIDC authentication for keyless deployment</li>
-                <li><i class="fas fa-check-circle"></i> Full GitHub Actions SHA pinning for supply-chain security</li>
-                <li><i class="fas fa-check-circle"></i> Deeper observability dashboards and custom PromQL queries</li>
-                <li><i class="fas fa-check-circle"></i> Advanced Kubernetes policy enforcement (e.g. OPA Gatekeeper)</li>
-                <li><i class="fas fa-check-circle"></i> Automated semantic release management</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section bg-alt">
-        <div class="container text-center">
-            <h2 class="section-title">Let's Connect</h2>
-            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Open to DevOps, Cloud, and Platform Engineering opportunities.</p>
-            <div class="contact-links">
-                <a href="https://github.com/M-Fahim-Feroz" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="mailto:cadetfahimferoz@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
-                <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container text-center">
-            <p>&copy; 2026 M. Fahim Feroz. Built with plain HTML & CSS.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        </footer>
+    </main>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>

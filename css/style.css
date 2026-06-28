@@ -1,0 +1,59 @@
+body { 
+    background-color: #07110D; 
+    color: #d9e5de; 
+}
+
+.glass-panel {
+    background: rgba(16, 34, 24, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #244034;
+}
+
+.premium-border { 
+    border: 1px solid #C7A76C; 
+}
+
+.tech-chip { 
+    background-color: #132B1F; 
+    border: 1px solid #244034; 
+    color: #86EFAC; 
+}
+
+.tech-chip:hover { 
+    border-color: #22C55E; 
+}
+
+/* Subtle float animation for the hero image card */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-element { 
+    animation: float 6s ease-in-out infinite; 
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(36, 64, 52, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(36, 64, 52, 0.1) 1px, transparent 1px);
+}
+
+/* Custom Scrollbar for better dark mode experience */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0B1711;
+}
+::-webkit-scrollbar-thumb {
+    background: #244034;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #22c55e;
+}
