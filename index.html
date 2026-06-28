@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Fahim Feroz - DevOps & Cloud Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for generic icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content container">
+            <div class="logo">MFF<span class="accent">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">M. Fahim Feroz</h1>
+            <h2 class="hero-subtitle">DevOps & Cloud Engineer</h2>
+            <p class="hero-text">
+                Designing cloud infrastructure, CI/CD pipelines, Kubernetes deployments, and secure automation workflows across Azure and AWS.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/M-Fahim-Feroz" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub Profile</a>
+                <a href="#" class="btn btn-outline"><i class="fas fa-file-alt"></i> Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I am a DevOps and Cloud Engineer focused on designing scalable, reproducible, and secure infrastructure. My expertise spans cloud infrastructure provisioning, automated delivery pipelines, container orchestration, and Infrastructure as Code. I build security-first deployment workflows with embedded observability, ensuring that systems are resilient, cost-aware, and built to enterprise standards from commit to cluster.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Core Engineering Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud</h3>
+                    <p>Azure, AWS</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-box-open"></i></div>
+                    <h3>Containers</h3>
+                    <p>Docker, Kubernetes, Helm</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>IaC</h3>
+                    <p>Terraform, Ansible</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-random"></i></div>
+                    <h3>CI/CD</h3>
+                    <p>GitHub Actions</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Security</h3>
+                    <p>CodeQL, Trivy, Dependabot, Secret Hygiene</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Observability</h3>
+                    <p>Prometheus, Grafana</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend/Systems</h3>
+                    <p>FastAPI, PostgreSQL, Redis, Linux</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Flagship Project -->
+                <div class="project-card flagship">
+                    <div class="project-header">
+                        <div class="project-badge">Flagship Project</div>
+                        <h3>azure-aks-devops-pipeline</h3>
+                    </div>
+                    <p class="project-desc">End-to-end Azure AKS DevOps platform with Terraform, Ansible, Docker, GitHub Actions, FastAPI, PostgreSQL, Redis, Prometheus, and Grafana.</p>
+                    <div class="project-tech">
+                        <span>Azure</span><span>AKS</span><span>Terraform</span><span>Ansible</span><span>Docker</span><span>GitHub Actions</span><span>Prometheus</span>
+                    </div>
+                    <div class="project-focus">
+                        <strong>Engineering Focus:</strong> Production-style cloud deployment, CI/CD, observability, Kubernetes operations.
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Automated end-to-end pipeline provisioning Azure infrastructure via Terraform with remote state.</li>
+                        <li>Declarative Kubernetes deployment via Ansible and Helm.</li>
+                        <li>Full observability stack providing namespace, pod, and node metrics out of the box.</li>
+                    </ul>
+                    <a href="https://github.com/M-Fahim-Feroz/azure-aks-devops-pipeline" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <h3>terraform-aws-infrastructure</h3>
+                    <p class="project-desc">Modular AWS infrastructure using Terraform, GitHub Actions plan/apply workflows, remote state, VPC networking, compute, database, and security groups.</p>
+                    <div class="project-tech">
+                        <span>AWS</span><span>Terraform</span><span>VPC</span><span>EC2</span><span>RDS</span>
+                    </div>
+                    <div class="project-focus">
+                        <strong>Engineering Focus:</strong> Infrastructure as Code, AWS networking, safe Terraform workflow design.
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Zero-SSH architecture utilizing AWS Systems Manager.</li>
+                        <li>Protected plan/apply pipelines with manual deployment gates.</li>
+                        <li>Multi-AZ layout ensuring high availability and database privacy.</li>
+                    </ul>
+                    <a href="https://github.com/M-Fahim-Feroz/terraform-aws-infrastructure" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <h3>fastapi-devsecops-pipeline</h3>
+                    <p class="project-desc">FastAPI DevSecOps project with Docker, CI/CD, security scanning, testing, and local service orchestration.</p>
+                    <div class="project-tech">
+                        <span>FastAPI</span><span>Docker</span><span>Trivy</span><span>Bandit</span><span>GitHub Actions</span>
+                    </div>
+                    <div class="project-focus">
+                        <strong>Engineering Focus:</strong> Secure application delivery, container builds, SAST/dependency/container scanning.
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Multi-stage Docker builds securing minimal base images and non-root execution.</li>
+                        <li>Integrated SAST (Bandit) and CVE scanning (Trivy) acting as pipeline gates.</li>
+                        <li>Robust local orchestration of asynchronous workers via Docker Compose.</li>
+                    </ul>
+                    <a href="https://github.com/M-Fahim-Feroz/fastapi-devsecops-pipeline" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <h3>kubernetes-application-deployment</h3>
+                    <p class="project-desc">Kubernetes deployment project with manifests, Helm, CI validation, image tag injection, and local render/deploy workflow.</p>
+                    <div class="project-tech">
+                        <span>Kubernetes</span><span>Helm</span><span>Docker</span>
+                    </div>
+                    <div class="project-focus">
+                        <strong>Engineering Focus:</strong> Kubernetes deployment hygiene, manifest validation, release-safe image tagging.
+                    </div>
+                    <ul class="project-bullets">
+                        <li>Declarative raw YAML and parameterized Helm chart strategies.</li>
+                        <li>Dynamic CI injection of Git SHA tags into deployment manifests.</li>
+                        <li>Security boundaries defined by NetworkPolicies, HPA, and precise resource limits.</li>
+                    </ul>
+                    <a href="https://github.com/M-Fahim-Feroz/kubernetes-application-deployment" target="_blank" class="project-link">View Repository <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Engineering Approach</h2>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <h4><i class="fas fa-cube"></i> Reproducible Infrastructure</h4>
+                    <p>Managing ephemeral cloud resources purely via IaC to eliminate configuration drift and manual UI provisioning.</p>
+                </div>
+                <div class="approach-card">
+                    <h4><i class="fas fa-lock"></i> Secure CI/CD</h4>
+                    <p>Integrating static analysis, CVE scanning, and least-privilege principles directly into automated delivery pipelines.</p>
+                </div>
+                <div class="approach-card">
+                    <h4><i class="fas fa-dharmachakra"></i> Kubernetes-Ready Deployments</h4>
+                    <p>Architecting scalable, resource-bounded, and self-healing container workloads using raw manifests and Helm.</p>
+                </div>
+                <div class="approach-card">
+                    <h4><i class="fas fa-book"></i> Operational Documentation</h4>
+                    <p>Providing full-stack metric visibility alongside comprehensive runbooks, architecture diagrams, and cost analyses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="section">
+        <div class="container">
+            <h2 class="section-title">Portfolio Roadmap</h2>
+            <ul class="roadmap-list">
+                <li><i class="fas fa-check-circle"></i> Cloud OIDC authentication for keyless deployment</li>
+                <li><i class="fas fa-check-circle"></i> Full GitHub Actions SHA pinning for supply-chain security</li>
+                <li><i class="fas fa-check-circle"></i> Deeper observability dashboards and custom PromQL queries</li>
+                <li><i class="fas fa-check-circle"></i> Advanced Kubernetes policy enforcement (e.g. OPA Gatekeeper)</li>
+                <li><i class="fas fa-check-circle"></i> Automated semantic release management</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-alt">
+        <div class="container text-center">
+            <h2 class="section-title">Let's Connect</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);">Open to DevOps, Cloud, and Platform Engineering opportunities.</p>
+            <div class="contact-links">
+                <a href="https://github.com/M-Fahim-Feroz" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="mailto:cadetfahimferoz@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+                <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 M. Fahim Feroz. Built with plain HTML & CSS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
