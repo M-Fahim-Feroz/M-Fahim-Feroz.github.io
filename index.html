@@ -431,17 +431,21 @@
                     </a>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-[#e4c284] transition-colors duration-300 flex flex-col">
-                    <h3 class="font-bold text-xl text-on-surface mb-3">Terraform AWS Infrastructure</h3>
-                    <p class="text-on-surface-variant mb-4 leading-relaxed text-sm">
-                        Modular Terraform project provisioning a production-style AWS environment. Multi-AZ VPC with public and private subnets, ALB, EC2 in private subnets, RDS PostgreSQL, S3 remote state with DynamoDB locking. GitHub Actions pipeline separates <code class="text-primary bg-[#102218] px-1 rounded text-xs">plan</code> from <code class="text-primary bg-[#102218] px-1 rounded text-xs">apply</code> with a manual confirmation gate.
+                <!-- Project 2 — FULL WIDTH (gold accent) -->
+                <div class="md:col-span-2 p-8 border border-[#e4c284]/30 bg-surface rounded-xl hover:border-[#e4c284] transition-colors duration-300 flex flex-col" style="box-shadow: 0 0 24px rgba(228,194,132,0.04);">
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest bg-[#1e1a0e] text-secondary border border-[#e4c284]/30">Infrastructure as Code</span>
+                        <h3 class="font-bold text-xl md:text-2xl text-on-surface">Terraform AWS Infrastructure</h3>
+                    </div>
+                    <p class="text-on-surface-variant mb-5 leading-relaxed">
+                        Modular Terraform project provisioning a production-style AWS environment. Multi-AZ VPC with public and private subnets, ALB, EC2 in private subnets, RDS PostgreSQL, S3 remote state with DynamoDB locking. GitHub Actions pipeline separates <code class="text-primary bg-[#102218] px-1 rounded text-sm">plan</code> from <code class="text-primary bg-[#102218] px-1 rounded text-sm">apply</code> with a manual confirmation gate.
                     </p>
-                    <ul class="space-y-1.5 mb-5 text-sm text-on-surface-variant">
-                        <li class="flex gap-2"><span class="text-primary">›</span> Zero-SSH design — EC2 instances managed via AWS Systems Manager, no public IPs</li>
-                        <li class="flex gap-2"><span class="text-primary">›</span> Each layer (VPC, EC2, ALB, IAM, RDS) is an independent reusable module</li>
-                        <li class="flex gap-2"><span class="text-primary">›</span> <code class="text-primary bg-[#102218] px-1 rounded text-xs">terraform apply</code> requires typed <code class="text-primary bg-[#102218] px-1 rounded text-xs">APPLY</code> confirmation — no accidental infra changes</li>
-                        <li class="flex gap-2"><span class="text-primary">›</span> Infrastructure deployed and validated on real AWS, then destroyed to control cost</li>
+                    <ul class="space-y-2 mb-6 text-sm text-on-surface-variant">
+                        <li class="flex gap-2"><span class="text-secondary mt-0.5">›</span> Zero-SSH design — EC2 instances managed via AWS Systems Manager, no public IPs</li>
+                        <li class="flex gap-2"><span class="text-secondary mt-0.5">›</span> Each layer (VPC, EC2, ALB, IAM, RDS) is an independent reusable module with clear input/output contracts</li>
+                        <li class="flex gap-2"><span class="text-secondary mt-0.5">›</span> <code class="text-primary bg-[#102218] px-1 rounded text-xs">terraform apply</code> requires typed <code class="text-primary bg-[#102218] px-1 rounded text-xs">APPLY</code> confirmation — no accidental infrastructure changes</li>
+                        <li class="flex gap-2"><span class="text-secondary mt-0.5">›</span> Remote state stored in S3 with DynamoDB locking — prevents concurrent applies and state corruption</li>
+                        <li class="flex gap-2"><span class="text-secondary mt-0.5">›</span> Infrastructure deployed and validated on real AWS, then destroyed to control ongoing costs</li>
                     </ul>
                     <div class="flex flex-wrap gap-2 mb-6">
                         <span class="tech-chip text-xs font-label-mono px-2 py-1 rounded">AWS</span>
@@ -487,7 +491,7 @@
                 </div>
 
                 <!-- Project 4 -->
-                <div class="md:col-span-2 lg:col-span-1 p-8 border border-[#244034] bg-surface rounded-xl hover:border-[#e4c284] transition-colors duration-300 flex flex-col">
+                <div class="p-8 border border-[#244034] bg-surface rounded-xl hover:border-[#e4c284] transition-colors duration-300 flex flex-col">
                     <h3 class="font-bold text-xl text-on-surface mb-3">FastAPI DevSecOps Pipeline</h3>
                     <p class="text-on-surface-variant mb-4 leading-relaxed text-sm">
                         A FastAPI + Celery + PostgreSQL + Redis application with a full DevSecOps CI/CD pipeline. Multi-stage Docker builds produce a minimal non-root image. GitHub Actions runs lint, SAST, unit tests, and a Trivy CVE scan before any image is pushed to Docker Hub.
