@@ -52,11 +52,11 @@ body {
 /* Scroll-to-top button */
 #scroll-top-btn {
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1.5rem;
+    right: 1rem;
     z-index: 999;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     background: #132B1F;
     border: 1px solid #244034;
     border-radius: 8px;
@@ -76,9 +76,57 @@ body {
 #scroll-top-btn:hover {
     border-color: #22C55E;
 }
+@media (min-width: 768px) {
+    #scroll-top-btn {
+        bottom: 2rem;
+        right: 2rem;
+        width: 44px;
+        height: 44px;
+    }
+}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: #0B1711; }
 ::-webkit-scrollbar-thumb { background: #244034; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #22c55e; }
+
+/* ── Mobile-specific overrides ────────────────────────────────────────── */
+
+/* Keep the floating hero card from overflowing the viewport */
+@media (max-width: 639px) {
+    .floating-element {
+        left: 8px !important;
+        right: auto;
+        bottom: -12px !important;
+        max-width: calc(100% - 16px);
+        font-size: 10px;
+    }
+    /* Constrain about-section image height on small screens */
+    .about-image-wrap {
+        max-height: 320px;
+        overflow: hidden;
+    }
+    /* Reduce card padding on mobile */
+    .project-card-inner {
+        padding: 1.25rem;
+    }
+}
+
+/* Prevent long code snippets from breaking layout */
+code {
+    word-break: break-all;
+    white-space: normal;
+}
+
+/* Ensure full-width buttons stack neatly on tiny screens */
+@media (max-width: 400px) {
+    .hero-cta-wrap {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-cta-wrap a {
+        width: 100%;
+        justify-content: center;
+    }
+}
